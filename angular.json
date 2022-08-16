@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "angular-flex-example"
+  "cli": {
+    "analytics": false
+  }
 }
