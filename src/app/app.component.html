@@ -17,12 +17,27 @@
         <mat-card>Card Two</mat-card>
         <mat-card>Card Threee</mat-card>
   </div>
-  <div class="item item-3"
+  <div class="item item-3 material"
         fxFlex
   >
-  <mat-card>Card One</mat-card>
-  <mat-card>Card Two</mat-card>
-  <mat-card>Card Threee</mat-card>
+  <mat-toolbar color="primary" >
+    <mat-toolbar-row>
+      <span>Custom Toolbar</span>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Third Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
   </div>
 </div>
 
@@ -104,7 +119,12 @@
   <div class="item item-6"
         fxFlex>Using CSS Grid
         <div class="grid-container">
-          <div class="grid-item"><label>Enter Name</label><input type="text"> </div>
+          <div class="grid-item">
+            <mat-form-field appearance="fill">
+              <mat-label>Export Date</mat-label>
+              <input matInput placeholder="Export Date">
+            </mat-form-field>
+          </div>
           <div class="grid-item"><label>Export Date</label><input type="date"></div>
           <div class="grid-item"><label>Import Date</label><input type="date"></div>
           <div class="grid-item"><label>Manufacturer</label><input type="text"></div>
