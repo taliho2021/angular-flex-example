@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 
 @NgModule({
@@ -13,12 +13,16 @@ import { MaterialModule } from './material/material.module';
   ],
   imports: [
     BrowserModule,
-    FlexLayoutModule,
     FormsModule,
-    AppRoutingModule,
-    MaterialModule
+    ReactiveFormsModule,
+    MaterialModule,
+    FlexLayoutModule,
+    AppRoutingModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

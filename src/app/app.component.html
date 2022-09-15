@@ -11,33 +11,62 @@
         <mat-card>Card Two</mat-card>
         <mat-card>Card Threee</mat-card>
   </div>
-  <div class="item item-2"
-        fxFlex="20%">
-        <mat-card>Card One</mat-card>
-        <mat-card>Card Two</mat-card>
-        <mat-card>Card Threee</mat-card>
+  <div  fxFlex="30%" fxLayoutGap="20px">
+    <mat-form-field appearance="fill" fxLayout="column">
+      <mat-label>Input</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill" fxLayout="column">
+      <mat-label>Select</mat-label>
+      <mat-select fxLayout="column">
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" fxLayout="column">
+      <mat-label>Input</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill" fxLayout="column">
+      <mat-label>Select</mat-label>
+      <mat-select fxLayout="column">
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+
   </div>
+
   <div class="item item-3 material"
         fxFlex
   >
-  <mat-toolbar color="primary" >
-    <mat-toolbar-row>
-      <span>Custom Toolbar</span>
-    </mat-toolbar-row>
-  
-    <mat-toolbar-row>
-      <span>Second Line</span>
-      <span class="example-spacer"></span>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-    </mat-toolbar-row>
-  
-    <mat-toolbar-row>
-      <span>Third Line</span>
-      <span class="example-spacer"></span>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
-    </mat-toolbar-row>
-  </mat-toolbar>
+    <mat-toolbar color="primary" >
+      <mat-toolbar-row>
+        <span>Custom Toolbar</span>
+      </mat-toolbar-row>
+    
+      <mat-toolbar-row>
+        <span>Second Line</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+      </mat-toolbar-row>
+    
+      <mat-toolbar-row>
+        <span>Third Line</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
   </div>
 </div>
 
@@ -146,4 +175,94 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="container">
+    <div fxFlex="calc2Cols">flex: 1 1 5em;</div>
+    <p>
+      <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+    </p>
+    
+    <p>
+        <span matBadge="1" matBadgeSize="large">Text with large badge</span>
+    </p>
+    
+    <p>
+      Button with a badge on the left
+      <button mat-raised-button color="primary"
+          matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+        Action
+      </button>
+    </p>
+    
+    <p>
+        Button toggles badge visibility
+        <button mat-raised-button matBadge="7" matBadgeHidden="hidden" (click)="toggleBadgeVisibility()">
+            Hide
+        </button>
+    </p>
+    
+    <p>
+      Icon with a badge
+      <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+        <!-- Include text description of the icon's meaning for screen-readers -->
+        <span class="cdk-visually-hidden">
+          Example with a home icon with overlaid badge showing the number 15
+        </span>
+    </p>
+    
+    
+    
+  </div>
+
+  <div class="container">
+    <div></div>
+    <div fxFlex="calc2Cols">flex: 2 2 cal(10em + 10px);</div>
+    <div></div>
+  </div>
+  <div class="container">
+    <div fxFlex="calc2Cols">flex: 2 2 cal(10em + 10px);</div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div fxFlex="calc2Cols">flex: 2 2 cal(10em + 10px);</div>
+  </div>
+  
+  <div class="container">
+    <div fxFlex="calc3Cols" class="col4"> flex: 3 3 calc(15em + 20px);</div>
+    <div></div>
+  </div>
+
+  <div class="container">
+    <div></div>
+    <div fxFlex="calc3Cols" class="col4"> flex: 3 3 calc(15em + 20px);</div>
+  </div>
+</div>
+
+<div fxLayout='column' class="zero">
+
+  <div fxFlex="33" class="one" > Col 1</div>
+  <div fxFlex="33%" fxLayout="direction" class="two">
+
+    <div fxFlex="22%"    class="two_one"> Col 2</div>
+    <div fxFlex="205px"  class="two_two"> Col 3</div>
+    <div fxFlex="30"     class="two_three"> Col 4</div>
+
+  </div>
+  <div fxFlex class="three"> Col 5</div>
+
+</div>
+
+<div>
+  Ng-template content
+  <div *ngIf="true else showNgTemplateContent">
+    This displays if condiion is false.
+  </div>
+</div>
+
+<ng-template #showNgTemplateContent>
+    Displays if the condition is true.
+</ng-template>
 <router-outlet></router-outlet>
